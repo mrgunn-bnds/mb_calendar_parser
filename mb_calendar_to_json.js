@@ -46,8 +46,22 @@ function extractSchedule() {
     return schedule;
 }
 
+// Function to save JSON to a file
+function downloadJSON(data, filename = "managebac_schedule.json") {
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+
 // Get the structured schedule data
 const classData = extractSchedule();
+
+// Download the JSON file
+downloadJSON(classData);
 
 // Convert to JSON
 const jsonData = toJSON(classData);
