@@ -29,13 +29,15 @@ function extractSchedule() {
                     const classTime = classCell.querySelector('.text-ellipsis:last-child')?.textContent.trim() || 'Unknown';
                     const periodNumber = columns[0].textContent.trim(); // First column is period number
 
-                    // Add the period's class details for the corresponding weekday
-                    schedule[day].push({
-                        Period: periodNumber,
-                        Class: className,
-                        Grade: classGrade,
-                        Time: classTime
-                    });
+                    // Only add to schedule if className is not empty
+                    if (className && className !== 'Unknown') {
+                        schedule[day].push({
+                            Period: periodNumber,
+                            Class: className,
+                            Grade: classGrade,
+                            Time: classTime
+                        });
+                    }
                 }
             });
         }
