@@ -29,13 +29,14 @@ With this **handy script**, you can **instantly extract** your schedule into **J
 
 ### **4. Get Your JSON!**
 - The script will generate a **structured JSON output**.
-- Copy the output and **use it in Excel, Google Sheets, or any data tool**.
-
+- Save the json file somewhere
+- Use it in a webpage like https://data.page/json/csv
+- 
 ---
 
 ## **What’s Next?**
 This script currently outputs **JSON**. If you need **CSV**, you can:
-- Use **an online JSON to CSV converter**.
+- Use **an online JSON to CSV converter**. e.g https://data.page/json/csv
 - Otherwise wait, I'll work on that later.
 ---
 
